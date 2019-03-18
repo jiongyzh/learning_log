@@ -24,7 +24,10 @@ for repo_dict in repo_dicts:
     names.append(repo_dict['name'])
     if not repo_dict['description']:
         repo_dict['description'] = ''
-    plot_dicts.append({'value': repo_dict['stargazers_count'], 'label': repo_dict['description']})
+    plot_dicts.append({'value': repo_dict['stargazers_count'],
+                       'label': repo_dict['description'],
+                       'xlink': repo_dict['html_url']
+                       })
 
 
 # Make visualization.
